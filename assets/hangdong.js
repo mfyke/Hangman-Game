@@ -75,9 +75,11 @@ function start () {
 	document.getElementById('result').innerHTML="Overwatch Hangman";
 	document.getElementById('playAgain').style.display="none";
 	document.getElementById('boner').style.display="initial";
+	document.getElementById('instruction').style.display="initial";
 }
 
 document.onkeyup=function() {
+	hideInstruction();
 	guessing();
 	charlieSheen();
 	chandler();
@@ -88,4 +90,7 @@ function winner () {
 }
 function winButton () {
 	document.getElementById('playAgain').style.display="block";
+}
+function hideInstruction () {
+	document.getElementById('instruction').style.display="none";
 }
